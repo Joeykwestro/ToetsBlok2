@@ -1,5 +1,5 @@
 body{
-	background-color: black;
+	background-color: grey;
 }
 
 #allContainer{
@@ -7,13 +7,12 @@ body{
 	width: 1000px;
 	margin: 0 auto;
 	display: block;
-	padding: 5px;
 }
 
 #Headercontainer{
 	margin: 0 auto;
 	display: block;
-	padding-bottom: 5px;
+	padding-bottom: 1px;
 	background-color: white;
 }
 
@@ -48,6 +47,13 @@ a{
 a:hover{
 	color: white;
 }
+
+b{
+	font-family: 'Roboto', sans-serif;
+}
+
+#cdatext{
+	font-family: 'Noto Sans', sans-serif;}
 
 #witRuimte{
 	height: 50px;
@@ -117,6 +123,7 @@ a:hover{
 	grid-row: 1;
 	text-align: center;
 	background-color: #36b2d8;
+	padding: 15px;
 }
 
 #logoCDAText{
@@ -124,6 +131,7 @@ a:hover{
 	grid-row: 1;
 	text-align: center;
 	background-color: #d3721d;
+	padding: 15px;
 }
 
 #sybrand{
