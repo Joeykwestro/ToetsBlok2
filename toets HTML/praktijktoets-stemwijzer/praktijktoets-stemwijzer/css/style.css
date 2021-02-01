@@ -55,5 +55,48 @@ a:hover{
 
 #gridContainer{
 	display: grid;
+	margin: 0 auto;
+	width: 1000px;
 	grid-gap: 0px 0px;
+	grid-template-columns: auto auto auto auto auto;
+	grid-template-rows: auto auto auto auto;
+	background-color: white;
+}
+
+#cda{
+	grid-column: 1/3;
+	grid-row: 1/2;
+}
+
+#vvd{
+	grid-column: 3;
+	grid-row: 1/2;
+}
+
+#d66{
+	grid-column: 1/2;
+	grid-row: 3/4;
+}
+
+#pvda{
+	grid-column: 3;
+	grid-row: 3/4; 
+}
+
+#footer{
+	width: 1000px;
+	margin: 0 auto;
+	display: block;
+	background-color: #36b2d8;
+	padding: 10px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+#witRuimte2{
+	height: 2px;
+	background-color: white;
+	width: 1000px;
+	margin: 0 auto;
+	display: block;
 }
