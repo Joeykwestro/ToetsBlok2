@@ -53,7 +53,9 @@ b{
 }
 
 #cdatext{
-	font-family: 'Noto Sans', sans-serif;}
+	font-family: 'Noto Sans', sans-serif;
+	font-size: 24px;
+}
 
 #witRuimte{
 	height: 50px;
