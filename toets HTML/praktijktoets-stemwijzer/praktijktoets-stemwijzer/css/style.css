@@ -4,14 +4,17 @@ body{
 
 #allContainer{
 	background-color: grey;
-	width: 1020px;
+	width: 1000px;
 	margin: 0 auto;
 	display: block;
+	padding: 5px;
 }
 
 #Header{
 	margin: 0 auto;
 	display: block;
+	padding-bottom: 5px;
+	background-color: white;
 }
 
 #Menu{
@@ -71,6 +74,7 @@ a:hover{
 #vvd{
 	grid-column: 3;
 	grid-row: 1/2;
+	margin-top: 50px;
 }
 
 #d66{
@@ -81,6 +85,7 @@ a:hover{
 #pvda{
 	grid-column: 3;
 	grid-row: 3/4; 
+	margin-top: 50%;
 }
 
 #footer{
@@ -99,4 +104,37 @@ a:hover{
 	width: 1000px;
 	margin: 0 auto;
 	display: block;
+}
+
+#tweedeKamerLeden{
+	grid-column: 1/4;
+	grid-row: 1;
+	text-align: center;
+	background-color: #36b2d8;
+}
+
+#logoCDAText{
+	grid-column: 4/5;
+	grid-row: 1;
+	text-align: center;
+}
+
+#sybrand{
+	grid-column: 1;
+	grid-row: 2;
+}
+
+#agnes{
+	grid-column: 2;
+	grid-row: 2;
+}
+
+#harry{
+	grid-column: 3;
+	grid-row: 2;
+}
+
+#logoCDA{
+	grid-column: 4/5;
+	grid-row: 2;	
 }
