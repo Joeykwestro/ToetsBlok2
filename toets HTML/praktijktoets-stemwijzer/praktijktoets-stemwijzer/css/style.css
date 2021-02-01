@@ -10,7 +10,7 @@ body{
 	padding: 5px;
 }
 
-#Header{
+#Headercontainer{
 	margin: 0 auto;
 	display: block;
 	padding-bottom: 5px;
@@ -99,6 +99,10 @@ a:hover{
 	text-align: center;
 }
 
+#footerText{
+	text-decoration: 
+}
+
 #witRuimte2{
 	height: 2px;
 	background-color: white;
@@ -139,4 +143,41 @@ a:hover{
 #logoCDA{
 	grid-column: 4/5;
 	grid-row: 2;	
+}
+
+#klaas{
+	grid-column: 1/2;
+	grid-row: 1;
+}
+
+#jan-remco{
+	grid-column: 3;
+	grid-row: 1;
+}
+
+#bas{
+	grid-column: 4/5;
+	grid-row: 1;
+}
+
+#sophie{
+	grid-column: 1/2;
+	grid-row: 3;
+}
+
+#dilan-judith{
+	grid-column: 3;
+	grid-row: 3;
+}
+
+#ockje{
+	grid-column: 4/5;
+	grid-row: 3;
+}
+
+#witRuimteGrid{
+	grid-column: 1/5;
+	grid-row: 2;
+	background-color: white;
+	height: 5px;
 }
