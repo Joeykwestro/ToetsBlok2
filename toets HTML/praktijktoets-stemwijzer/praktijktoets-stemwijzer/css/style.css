@@ -96,6 +96,7 @@ a:hover{
 	padding: 10px;
 	padding-left: 0px;
 	padding-right: 0px;
+	text-align: center;
 }
 
 #witRuimte2{
@@ -117,6 +118,7 @@ a:hover{
 	grid-column: 4/5;
 	grid-row: 1;
 	text-align: center;
+	background-color: #d3721d;
 }
 
 #sybrand{
