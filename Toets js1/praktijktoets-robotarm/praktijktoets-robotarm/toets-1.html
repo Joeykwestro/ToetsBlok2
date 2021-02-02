@@ -11,30 +11,37 @@
             robotArm.examLevel(1);
             robotArm.speed = 600;
             // Jouw instructies volgen hier
-
-            for(i=1;i<=4;i++){
-                robotArm.moveRight();
-            }
-
-            robotArm.grab();
-
-            
-
-            function moveBlock(color){
-                var color = robotArm.scan();
-                if(color = "white"){
-                    for(i=1;i<=4;i++){
-                        robotArm.moveLeft();
-                    }
+            var loop = true;
+            while(loop == true){
+                for(i=1;i<=4;i++){
+                    robotArm.moveRight();
                 }
-                else{
-                    for(i=1;i<=5;i++){
-                        robotArm.moveRight();
-                    }
-                }
-            }
-            moveBlock();
 
+                robotArm.grab();
+
+                
+
+                function moveBlock(color){
+                    var color = robotArm.scan();
+                    if(color == "white"){
+                        for(i=1;i<=4;i++){
+                            robotArm.moveLeft();
+                        }
+                        robotArm.drop();
+                    }
+                    else if(color == NaN){
+                        loop = false;
+                    }
+                    else{
+                        for(i=1;i<=5;i++){
+                            robotArm.moveRight();
+                        }
+                        robotArm.drop();
+                    }
+                    loop == false;
+                }
+                moveBlock();
+            }
             // De door jou opgegeven instructies uitvoeren
             robotArm.run();
             
