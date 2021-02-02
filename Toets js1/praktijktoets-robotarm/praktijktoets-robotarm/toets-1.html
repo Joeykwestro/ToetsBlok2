@@ -12,7 +12,7 @@
             robotArm.speed = 400;
             // Jouw instructies volgen hier
             
-            var color = "white";
+            var color = "white"; /*Deze moet hier alvast een waarde krijgen zodat de while loop begint.*/
 
             for(i=1;i<=4;i++){
                 robotArm.moveRight();
@@ -25,7 +25,7 @@
                     robotArm.grab(); 
                     var color = robotArm.scan();
                     if(color == null){
-                        
+                        /*deze regel zorgt er alleen voor dat hij meteen stopt als er geen blokjes meer zijn.*/
                     }     
                     else if(color == "white"){
                         for(i=1;i<=4;i++){
@@ -46,9 +46,7 @@
                         }
                     }
                 }
-            }
-
-            
+            }   
             // De door jou opgegeven instructies uitvoeren
             robotArm.run();
             
