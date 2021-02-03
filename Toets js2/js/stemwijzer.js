@@ -44,7 +44,7 @@ function btn2Click(){
 }
 
 function btn3Click(){
-	stelling2();
+
 }
 
 function stelling2(){
@@ -53,3 +53,60 @@ function stelling2(){
 	button3.style.display = "none";
 	stelling.innerHTML = arr[1];
 }
+
+function stelling3(){
+	button1.style.backgroundColor = "lightgrey";
+	button2.style.backgroundColor = "lightgrey";
+	button3.style.display = "none";
+	stelling.innerHTML = arr[2];
+}
+
+function stelling4(){
+	button1.style.backgroundColor = "lightgrey";
+	button2.style.backgroundColor = "lightgrey";
+	button3.style.display = "none";
+	stelling.innerHTML = arr[3];
+}
+
+function stelling5(){
+	button1.style.backgroundColor = "lightgrey";
+	button2.style.backgroundColor = "lightgrey";
+	button3.style.display = "none";
+	stelling.innerHTML = arr[4];
+}
+
+function stelling6(){
+	button1.style.backgroundColor = "lightgrey";
+	button2.style.backgroundColor = "lightgrey";
+	button3.style.display = "none";
+	stelling.innerHTML = arr[5];
+}
+
+function stelling7(){
+	button1.style.backgroundColor = "lightgrey";
+	button2.style.backgroundColor = "lightgrey";
+	button3.style.display = "none";
+	stelling.innerHTML = arr[6];
+}
+
+function stelling8(){
+	button1.style.backgroundColor = "lightgrey";
+	button2.style.backgroundColor = "lightgrey";
+	button3.style.display = "none";
+	stelling.innerHTML = arr[7];
+}
+
+function stelling9(){
+	button1.style.backgroundColor = "lightgrey";
+	button2.style.backgroundColor = "lightgrey";
+	button3.style.display = "none";
+	stelling.innerHTML = arr[8];
+}
+
+function controle(){
+	button1.style.display = "none";
+	button2.style.display = "none";
+	button3.style.display = "none";
+	stelling.innerHTML = "";
+}
+
