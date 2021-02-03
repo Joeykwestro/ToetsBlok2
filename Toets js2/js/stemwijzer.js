@@ -1,4 +1,5 @@
 var arr = ["Nederland moet terug naar de Gulden.", "Er moet meer geld naar ontwikkelingshulp.", "De overheid moet afslanken", "De AOW leeftijd moet terug naar 67 jaar.", "Wiettellt moet worden gelegaliseerd.", "We moeten minder geld aan het leger uitgeven.", "Alle werkende moeten minder loonbelasting betalen.", "Er moet meer geld uitgegeven worden aan vluchtelingenopvang.", "Er moet minder geld uitgegeven worden aan de politie."];
+
 var stemwijzer = document.getElementById("stemWijzer");
 var stelling = document.createElement("h1");
 var div = document.createElement("div")
@@ -6,12 +7,34 @@ var button1 = document.createElement("BUTTON");
 var button2 = document.createElement("BUTTON");
 var button3 = document.createElement("BUTTON");
 
-stemwijzer.appendChild(stelling);
-stemwijzer.appendChild(div);
-div.appendChild(button1);
-div.appendChild(button2);
-div.appendChild(button3);
+function createHTML(){
+	stemwijzer.appendChild(stelling);
+	stemwijzer.appendChild(div);
+	div.appendChild(button1);
+	div.appendChild(button2);
+	div.appendChild(button3);
 
+	stelling.innerHTML = arr[0];
+	button1.innerHTML = "EENS";
+	button2.innerHTML = "ONEENS";
+	button3.innerHTML = "VOLGENDE";
+	button3.style.display = "none";
+
+	stelling.style.marginTop = "0px";
+	stemwijzer.style.textAlign = "center";
+	stemwijzer.style.height = "200px";
+	stemwijzer.style.backgroundColor = "white";
+
+	button1.style.backgroundColor = "lightgrey";
+	button2.style.backgroundColor = "lightgrey";
+	button3.style.backgroundColor = "lightgrey";
+}
+createHTML();
+
+button1.addEventListener("click", btn1Click);
+button2.addEventListener("click", btn2Click);
+
+button3.addEventListener("click", btn3Click);
 stelling.setAttribute("id", "stelling");
 div.setAttribute("id", "buttons");
 button1.setAttribute("id", "btnEens");
@@ -26,32 +49,15 @@ button1.addEventListener("mouseout", hover11);
 button2.addEventListener("mouseout", hover22);
 button3.addEventListener("mouseout", hover33);
 
-stelling.innerHTML = arr[0];
-button1.innerHTML = "EENS";
-button2.innerHTML = "ONEENS";
-button3.innerHTML = "VOLGENDE";
-button3.style.display = "none";
-
-stelling.style.marginTop = "0px";
-stemwijzer.style.textAlign = "center";
-stemwijzer.style.height = "200px";
-stemwijzer.style.backgroundColor = "white";
-
-button1.style.backgroundColor = "lightgrey";
-button2.style.backgroundColor = "lightgrey";
-button3.style.backgroundColor = "lightgrey";
-
-button1.addEventListener("click", btn1Click);
-button2.addEventListener("click", btn2Click);
-button3.addEventListener("click", btn3Click);
-
 var btn1Counter = 0;
 var btn2Counter = 0;
 
 function btn1Click(){
 	button1.style.backgroundColor = "white";
 	button2.style.backgroundColor = "lightgrey";
-	button3.style.display = "inline";
+	button3.style.display = "block";
+	button3.style.marginLeft = "455px";
+	button3.style.marginTop = "20px"
 	button1.disabled = true;
 	button2.disabled = false;
 }
@@ -59,7 +65,9 @@ function btn1Click(){
 function btn2Click(){
 	button2.style.backgroundColor = "white";
 	button1.style.backgroundColor = "lightgrey";
-	button3.style.display = "inline";
+	button3.style.display = "block";
+	button3.style.marginLeft = "455px";
+	button3.style.marginTop = "20px"
 	button1.disabled = false;
 	button2.disabled = true;
 }
@@ -124,21 +132,27 @@ function stelling9(){
 }
 
 function controle(){
-	button1.style.display = "none";
-	button2.style.display = "none";
-	button3.style.display = "none";
+	buttons.style.display = "none";
+	stelling.style.display = "none";
+	var text = document.createElement("p");
+	stemwijzer.appendChild(text);
+	text.style.marginTop = "0px";
+
 	if(btn1Counter >= 8){
-		stelling.innerHTML = "U heeft" + btn1Counter + "keer EENS gestemd. De partij die het beste bij uw voorkeur past is D66";
+		text.innerHTML = "U heeft " + btn1Counter + " keer EENS gestemd. De partij die het beste bij uw voorkeur past is D66";
 	}
 	else if(btn1Counter >= 5 & btn1Counter <= 7){
-		stelling.innerHTML = "U heeft" + btn1Counter + "keer EENS gestemd. De partij die het beste bij uw voorkeur past is PvdA";
+		text.innerHTML = "U heeft " + btn1Counter + " keer EENS gestemd. De partij die het beste bij uw voorkeur past is PvdA";
 	}
 	else if(btn1Counter >= 2 & btn1Counter <= 4){
-		stelling.innerHTML = "U heeft" + btn1Counter + "keer EENS gestemd. De partij die het beste bij uw voorkeur past is VVD";
+		text.innerHTML = "U heeft " + btn1Counter + " keer EENS gestemd. De partij die het beste bij uw voorkeur past is VVD";
 	}
-	else if(btn1Counter < 2 & btn1Counter >= 0){
+	else if(btn1Counter == 1){
+		text.innerHTML = "U heeft " + btn1Counter + " keer EENS gestemd. De partij die het beste bij uw voorkeur past is CDA";
 	}
-		stelling.innerHTML = "U heeft" + btn1Counter + "keer EENS gestemd. De partij die het beste bij uw voorkeur past is CDA";
+	else{
+		text.innerHTML = "U heeft " + btn1Counter + " keer EENS gestemd. De partij die het beste bij uw voorkeur past is CDA";
+	}
 }
 
 function hover1(){
